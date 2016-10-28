@@ -26,8 +26,8 @@ var Header = React.createClass({
   render: function () {
     return (
       <header className="header">
-        <h1>{this.state.description.title}</h1>
-        <div>{this.state.description.text}</div>
+        <h1 className="header__title">{this.state.description.title}</h1>
+        <div className="header__description">{this.state.description.text}</div>
       </header>
     )
   }

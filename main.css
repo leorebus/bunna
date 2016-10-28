@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Londrina+Solid");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  background-size: cover;
+  background-color: #a09a7f;
+  background-image: linear-gradient(left, #a09a7f 0%, #808a51 50%, #8d8964 75%, #95896d 100%);
+  background-image: -moz-linear-gradient(left, #a09a7f 0%, #808a51 50%, #8d8964 75%, #95896d 100%);
+  background-image: -webkit-linear-gradient(left, #a09a7f 0%, #808a51 50%, #8d8964 75%, #95896d 100%);
+  background-image: -o-linear-gradient(left, #a09a7f 0%, #808a51 50%, #8d8964 75%, #95896d 100%);
+  background-image: -ms-linear-gradient(left, #a09a7f 0%, #808a51 50%, #8d8964 75%, #95896d 100%);
+  background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, #a09a7f), color-stop(50%, #808a51), color-stop(75%, #8d8964), color-stop(100%, #95896d));
+  background-image: url("img/header.jpg");
+  height: 100vh; }
+
+.header__title {
+  color: #bd2132;
+  font-family: 'Londrina Solid', sans-serif;
+  font-size: 4rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  text-shadow: #fff 0 0 3px; }
+
+.header__description {
+  background-color: #a09a7f;
+  background-image: linear-gradient(left, #a09a7f 0%, #808a51 50%, #8d8964 75%, #95896d 100%);
+  background-image: -moz-linear-gradient(left, #a09a7f 0%, #808a51 50%, #8d8964 75%, #95896d 100%);
+  background-image: -webkit-linear-gradient(left, #a09a7f 0%, #808a51 50%, #8d8964 75%, #95896d 100%);
+  background-image: -o-linear-gradient(left, #a09a7f 0%, #808a51 50%, #8d8964 75%, #95896d 100%);
+  background-image: -ms-linear-gradient(left, #a09a7f 0%, #808a51 50%, #8d8964 75%, #95896d 100%);
+  background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, #a09a7f), color-stop(50%, #808a51), color-stop(75%, #8d8964), color-stop(100%, #95896d));
+  bottom: 0;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  padding: 2rem;
+  position: absolute;
+  right: 0;
+  width: 60%; }
+
+/*# sourceMappingURL=main.css.map */

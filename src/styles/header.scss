@@ -1,0 +1,31 @@
+$title-color: $red;
+$title-shadow: $white;
+$description-color: $white;
+
+.header {
+  background-size: cover;
+  @include gradientVertical4(#a09a7f, #808a51, #8d8964, #95896d);
+  background-image: url("img/header.jpg");
+  height: 100vh;
+}
+
+.header__title {
+  color: $title-color;
+  font-family: 'Londrina Solid', sans-serif;
+  font-size: 4rem;
+  padding: $spacing-base;
+  text-transform: uppercase;
+  text-shadow: $title-shadow 0 0 3px;
+}
+
+.header__description {
+  @include gradientVertical4(#a09a7f, #808a51, #8d8964, #95896d);
+
+  bottom: 0;
+  color: $description-color;
+  font-family: 'Lato', sans-serif;
+  padding: $spacing-double;
+  position: absolute;
+  right: 0;
+  width: 60%;
+}
