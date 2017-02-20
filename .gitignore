@@ -5,3 +5,4 @@ www/bundle.js
 npm-debug.log
 .sass-cache/
 main.css.map
+public
