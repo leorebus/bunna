@@ -1,0 +1,19 @@
+$l-spacing: $page-padding / 2;
+
+.l-row {
+  padding: $l-spacing;
+  display: flex;
+  flex-direction: column;
+
+  @media #{$media-enhanced} {
+    flex-direction: row;
+    padding: $l-spacing $page-h-padding-en;
+  }
+}
+
+.l-col {
+  padding: $l-spacing;
+  @media #{$media-enhanced} {
+    flex: 0 1 50%;
+  }
+}

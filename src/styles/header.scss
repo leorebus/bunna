@@ -1,31 +1,58 @@
-$title-color: $red;
-$title-shadow: $white;
-$description-color: $white;
+$header-height: 6rem;
+$header-height-en: 12rem;
 
 .header {
-  background-size: cover;
-  @include gradientVertical4(#a09a7f, #808a51, #8d8964, #95896d);
-  background-image: url("img/header.jpg");
-  height: 100vh;
+  align-items: center;
+  display: flex;
+  height: $header-height;
+  padding: $page-padding;
+
+  @media #{$media-enhanced} {
+    height: $header-height-en;
+    padding: $page-padding $page-h-padding-en;
+  }
+}
+
+.header__logo {
+  background-size: $header-height;
+  background-position: center;
+  background-image: url("img/logo.png");
+  flex: 0 0 $header-height;
+  height: $header-height;
+
+  @media #{$media-enhanced} {
+    background-size: $header-height-en;
+    flex: 0 0 $header-height-en;
+    height: $header-height-en;
+  }
 }
 
 .header__title {
-  color: $title-color;
+  color: $column-title-color;
+  flex: 1 1 auto;
   font-family: 'Londrina Solid', sans-serif;
-  font-size: 4rem;
-  padding: $spacing-base;
+  font-size: $font-size-double;
+  padding: 0 $page-padding;
   text-transform: uppercase;
-  text-shadow: $title-shadow 0 0 3px;
+
+  @media #{$media-enhanced} {
+    font-size: $font-size-triple;
+  }
 }
 
-.header__description {
-  @include gradientVertical4(#a09a7f, #808a51, #8d8964, #95896d);
+.header__name {
+  display: inline-block;
+}
 
-  bottom: 0;
-  color: $description-color;
-  font-family: 'Lato', sans-serif;
-  padding: $spacing-double;
-  position: absolute;
-  right: 0;
-  width: 60%;
+.header__calltoaction {
+  padding: 1rem 3rem;
+  border-radius: 4px;
+  font-size: $font-size-base;
+  background: green;
+  color: white;
+  font-family: 'Londrina Solid', sans-serif;
+  text-transform: uppercase;
+  @media #{$media-enhanced} {
+    font-size: $font-size-double;
+  }
 }

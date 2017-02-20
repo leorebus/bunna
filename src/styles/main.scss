@@ -7,8 +7,23 @@ $black: #000;
 $white: #fff;
 
 $spacing-base: 1rem;
+$spacing-half: 0.5 * $spacing-base;
 $spacing-double: 2 * $spacing-base;
+
+$font-size-base: 1rem;
+$font-size-half: 0.5 * $font-size-base;
+$font-size-double: 2 * $font-size-base;
+$font-size-triple: 3 * $font-size-base;
+
+$page-h-padding-en: 10%;
+$page-padding: $spacing-half;
+
+$media-enhanced: "screen and (min-width: 768px)";
 
 @import "mixins";
 
+@import "layout";
+
+@import "column";
+@import "doormat";
 @import "header";
