@@ -2,7 +2,7 @@ var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
 
-var Header = React.createClass({
+var Description = React.createClass({
   getInitialState: function () {
     return {
       description: {}
@@ -33,4 +33,4 @@ var Header = React.createClass({
   }
 });
 
-module.exports = Header;
+module.exports = Description;

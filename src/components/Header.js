@@ -1,7 +1,5 @@
 var React = require('react');
 
-import {getClient} from '../services/contentfulClient';
-
 var Header = React.createClass({
   getInitialState: function () {
     return {

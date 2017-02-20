@@ -1,6 +1,7 @@
 var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
+import {Link} from 'react-router';
 
 var ArticlesList = React.createClass({
   getInitialState: function () {
@@ -33,6 +34,7 @@ var ArticlesList = React.createClass({
             return <li>{fields.title}</li>;
           })}
         </ul>
+        <Link to="/news">Leggi altre notizie</Link>
       </div>
     )
   }
