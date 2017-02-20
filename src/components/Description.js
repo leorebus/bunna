@@ -2,20 +2,20 @@ var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
 
-var ArticlesList = React.createClass({
+var Header = React.createClass({
   getInitialState: function () {
     return {
-      entries: []
+      description: {}
     };
   },
 
   componentWillMount: function () {
     getClient().getEntries({
-      content_type: 'blogPost'
+      content_type: 'description'
     })
-      .then(entries => {
+      .then(description => {
         this.setState({
-          entries: entries.items
+          description: description.items[0].fields
         });
       });
   },
@@ -26,16 +26,11 @@ var ArticlesList = React.createClass({
   render: function () {
     return (
       <div className="column l-col">
-        <h2 className="column__title">Ultime notizie</h2>
-        <ul>
-          {this.state.entries.map(function (entry) {
-            let fields = entry.fields;
-            return <li>{fields.title}</li>;
-          })}
-        </ul>
+        <h2 className="column__title">Il progetto</h2>
+        <div>{this.state.description.text}</div>
       </div>
     )
   }
 });
 
-module.exports = ArticlesList;
+module.exports = Header;
