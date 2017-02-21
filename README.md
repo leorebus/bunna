@@ -28,3 +28,10 @@ Compile
 ```
 npm run compile
 ```
+
+Build
+---
+
+```
+npm run build
+```
