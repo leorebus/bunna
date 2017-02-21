@@ -1,6 +1,10 @@
 @import "reset";
 
-@import url('https://fonts.googleapis.com/css?family=Lato|Londrina+Solid');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif|Londrina+Solid');
+
+body {
+  font-family: 'PT Serif', serif;
+}
 
 $red: #bd2132;
 $black: #000;

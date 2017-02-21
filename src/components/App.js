@@ -1,6 +1,6 @@
 var React = require('react');
 
-import Header from './components/Header';
+import Header from './Header';
 
 var App = React.createClass({
 
