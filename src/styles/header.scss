@@ -16,7 +16,7 @@ $header-height-en: 12rem;
 .header__logo {
   background-size: $header-height;
   background-position: center;
-  background-image: url("img/logo.png");
+  background-image: url("#{$assetPath}/logo.png");
   flex: 0 0 $header-height;
   height: $header-height;
 

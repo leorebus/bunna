@@ -6,6 +6,8 @@ import App from './components/App';
 import Home from './components/Home';
 import News from './components/News';
 
+import './styles/main.scss';
+
 import {initClient} from './services/contentfulClient';
 
 document.addEventListener('DOMContentLoaded', function() {

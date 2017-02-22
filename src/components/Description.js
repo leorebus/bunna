@@ -27,7 +27,7 @@ var Description = React.createClass({
   render: function () {
     return (
       <div className="column l-col">
-        <h2 className="column__title">Il progetto</h2>
+        <h2 className="column__title">Chi siamo</h2>
         <div>{this.state.description.text}</div>
         <Link to="/progetto">Continua a leggere</Link>
       </div>
