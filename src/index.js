@@ -5,6 +5,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './components/App';
 import Home from './components/Home';
 import News from './components/News';
+import Project from './components/Project';
 
 import './styles/main.scss';
 
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <Route path="/" component={App}>
               <IndexRoute component={Home} />
               <Route path="news" component={News} />
+              <Route path="progetto" component={Project} />
             </Route>
           </Router>,
           document.getElementById('app')

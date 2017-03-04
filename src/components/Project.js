@@ -2,7 +2,7 @@ var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
 
-var Description = React.createClass({
+var Project = React.createClass({
   getInitialState: function () {
     return {
       description: {}
@@ -25,13 +25,14 @@ var Description = React.createClass({
 
   render: function () {
     return (
-      <div className="column l-row__col">
-        <h2 className="column__title">Chi siamo</h2>
-        <div>{this.state.description.text}</div>
-        <Link to="/progetto">Continua a leggere</Link>
+      <div className="l-vl">
+        <div className="doormat l-vl__flexel"></div>
+        <pre className="project__description l-row l-vl__fixel">
+        {this.state.description.text}
+        </pre>
       </div>
     )
   }
 });
 
-module.exports = Description;
+module.exports = Project;

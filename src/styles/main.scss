@@ -8,9 +8,14 @@ body {
 
 $assetPath: "../../img";
 
-$red: #bd2132;
-$black: #000;
+$red: #be1b31;
+$flag-red: #ee3035;
+$orange: #faae56;
+$yellow: #ece755;
+$green: #0a8a4d;
+$brown: #4d2b15;
 $white: #fff;
+$black: #000;
 
 $spacing-base: 1rem;
 $spacing-half: 0.5 * $spacing-base;
@@ -33,3 +38,5 @@ $media-enhanced: "screen and (min-width: 1200px)";
 @import "column";
 @import "doormat";
 @import "header";
+@import "contact-button";
+@import "project";
