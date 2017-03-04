@@ -1,7 +1,6 @@
 var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
-import {Link} from 'react-router';
 
 var Description = React.createClass({
   getInitialState: function () {
@@ -26,7 +25,7 @@ var Description = React.createClass({
 
   render: function () {
     return (
-      <div className="column l-col">
+      <div className="column l-row__col">
         <h2 className="column__title">Chi siamo</h2>
         <div>{this.state.description.text}</div>
         <Link to="/progetto">Continua a leggere</Link>

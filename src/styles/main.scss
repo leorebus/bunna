@@ -22,9 +22,9 @@ $font-size-double: 2 * $font-size-base;
 $font-size-triple: 3 * $font-size-base;
 
 $page-h-padding-en: 10%;
-$page-padding: $spacing-half;
+$page-padding: $spacing-base;
 
-$media-enhanced: "screen and (min-width: 768px)";
+$media-enhanced: "screen and (min-width: 1200px)";
 
 @import "mixins";
 

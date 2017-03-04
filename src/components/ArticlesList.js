@@ -12,7 +12,8 @@ var ArticlesList = React.createClass({
 
   componentWillMount: function () {
     getClient().getEntries({
-      content_type: 'blogPost'
+      content_type: 'blogPost',
+      order: '-fields.date'
     })
       .then(entries => {
         this.setState({
@@ -26,7 +27,7 @@ var ArticlesList = React.createClass({
 
   render: function () {
     return (
-      <div className="column l-col">
+      <div className="column l-row__col">
         <h2 className="column__title">Ultime notizie</h2>
         <ul>
           {this.state.entries.map(function (entry) {
@@ -34,7 +35,7 @@ var ArticlesList = React.createClass({
             return <li>{fields.title}</li>;
           })}
         </ul>
-        <Link to="/news">Leggi altre notizie</Link>
+        <Link to="/news">Leggi tutti i report</Link>
       </div>
     )
   }

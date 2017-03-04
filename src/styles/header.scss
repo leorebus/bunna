@@ -14,9 +14,11 @@ $header-height-en: 12rem;
 }
 
 .header__logo {
-  background-size: $header-height;
+  background: url("#{$assetPath}/logo.png");
   background-position: center;
-  background-image: url("#{$assetPath}/logo.png");
+  background-repeat: no-repeat;
+  background-size: $header-height;
+  background-image: url("#{$assetPath}/logo.svg"), none;
   flex: 0 0 $header-height;
   height: $header-height;
 
@@ -41,16 +43,17 @@ $header-height-en: 12rem;
 }
 
 .header__name {
-  display: inline-block;
+  display: block;
 }
 
 .header__calltoaction {
-  padding: 1rem 3rem;
-  border-radius: 4px;
-  font-size: $font-size-base;
   background: green;
+  border-radius: 4px;
   color: white;
+  cursor: pointer;
+  font-size: $font-size-base;
   font-family: 'Londrina Solid', sans-serif;
+  padding: 1rem 3rem;
   text-transform: uppercase;
   @media #{$media-enhanced} {
     font-size: $font-size-double;

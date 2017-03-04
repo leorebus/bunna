@@ -9,10 +9,12 @@ var Header = React.createClass({
 
   render: function () {
     return (
-      <header className="header">
+      <header className="header l-vl__fixel">
         <div className="header__logo"></div>
         <div className="header__title">
-          <span className="header__name">No al matrimonio precoce</span></div>
+          <span className="header__name">No early marriage</span>
+          <span className="header__name">No al matrimonio precoce</span>
+        </div>
         <div className="header__calltoaction">Contatta</div>
       </header>
     )

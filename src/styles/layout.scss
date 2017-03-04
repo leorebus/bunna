@@ -11,9 +11,32 @@ $l-spacing: $page-padding / 2;
   }
 }
 
-.l-col {
+.l-row__col {
   padding: $l-spacing;
   @media #{$media-enhanced} {
     flex: 0 1 50%;
   }
+}
+
+/*
+ Vertical Layout:
+ flexel is the flexible element
+ fixel is the fixed element
+ */
+.l-vl {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.l-vl--page {
+  height: 100vh;
+}
+
+.l-vl__flexel {
+  flex: 1 1 100%;
+}
+
+.l-vl__fixel {
+  flex: 0 0 auto;
 }

@@ -53,10 +53,10 @@ body {
       flex-direction: row;
       padding: 0.25rem 10%; } }
 
-.l-col {
+.l-row__col {
   padding: 0.25rem; }
   @media screen and (min-width: 768px) {
-    .l-col {
+    .l-row__col {
       flex: 0 1 50%; } }
 
 .column__title {
