@@ -30,7 +30,9 @@ $l-spacing: $page-padding / 2;
 }
 
 .l-vl--page {
-  height: 100vh;
+  bottom: 0;
+  position: absolute;
+  top: 0;
 }
 
 .l-vl__flexel {

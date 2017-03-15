@@ -1,0 +1,13 @@
+// display in enhanced only
+.hidden-mb {
+  @media #{$media-mobile} {
+    display: none !important;
+  }
+}
+
+// display in mobile only
+.hidden-en {
+  @media #{$media-enhanced} {
+    display: none !important;
+  }
+}

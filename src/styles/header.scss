@@ -1,13 +1,15 @@
-$header-height: 6rem;
+$header-height: 12rem;
 $header-height-en: 12rem;
 
 .header {
   align-items: center;
   display: flex;
-  height: $header-height;
+  flex-direction: column;
+  justify-content: center;
   padding: $page-padding;
 
   @media #{$media-enhanced} {
+    flex-direction: row;
     height: $header-height-en;
     padding: $page-padding $page-h-padding-en;
   }
@@ -18,11 +20,13 @@ $header-height-en: 12rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: $header-height;
-  background-image: url("#{$assetPath}/logo.svg"), none;
+  background-image: url("#{$assetPath}/logo_mb.svg"), none;
   flex: 0 0 $header-height;
   height: $header-height;
+  width: $header-height;
 
   @media #{$media-enhanced} {
+    background-image: url("#{$assetPath}/logo_en.svg"), none;
     background-size: $header-height-en;
     flex: 0 0 $header-height-en;
     height: $header-height-en;
@@ -49,4 +53,13 @@ $header-height-en: 12rem;
 
 .header__name--variant {
   color: #4d2b15;
+}
+
+.header__contact {
+  flex: 1 0 auto;
+  margin-top: $spacing-base;
+  text-align: right;
+  @media #{$media-enhanced} {
+    margin: 0;
+  }
 }

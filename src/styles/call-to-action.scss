@@ -1,0 +1,23 @@
+.call-to-action {
+  background: $green;
+  border-radius: 4px;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-base;
+  font-family: 'Londrina Solid', sans-serif;
+  padding: $spacing-base $spacing-double;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  @media #{$media-enhanced} {
+    font-size: $font-size-double;
+  }
+}
+
+.call-to-action--larger-mb {
+  padding: $spacing-base 5rem;
+  @media #{$media-enhanced} {
+    padding: $spacing-base $spacing-double;
+  }
+}

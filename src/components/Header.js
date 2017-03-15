@@ -9,11 +9,13 @@ var Header = React.createClass({
     return (
       <header className="header l-vl__fixel">
         <Link className="header__logo" to="/" />
-        <Link className="header__title" to="/">
+        <Link className="header__title hidden-mb" to="/">
           <span className="header__name">No early marriage</span>
           <span className="header__name--variant">No al matrimonio precoce</span>
         </Link>
-        <ContactButton />
+        <div className="header__contact">
+          <ContactButton />
+        </div>
       </header>
     )
   }

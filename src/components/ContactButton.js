@@ -12,7 +12,7 @@ var Header = React.createClass({
 
   render: function () {
     return (
-      <a onClick={this.handleClick} href="mailto:contact" className="contact-button">Contatta</a>
+      <a onClick={this.handleClick} href="mailto:contact" className="call-to-action call-to-action--larger-mb">Contatta</a>
     )
   }
 });

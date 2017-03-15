@@ -2,8 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=PT+Serif|Londrina+Solid');
 
-body {
+html {
   font-family: 'PT Serif', serif;
+  font-size: 16px;
 }
 
 $assetPath: "../../img";
@@ -29,14 +30,16 @@ $font-size-triple: 3 * $font-size-base;
 $page-h-padding-en: 10%;
 $page-padding: $spacing-base;
 
-$media-enhanced: "screen and (min-width: 1200px)";
+$media-enhanced: "screen and (min-width: 1000px)";
+$media-mobile: "screen and (max-width: 1000px)";
 
 @import "mixins";
 
 @import "layout";
+@import "visibility";
 
 @import "column";
 @import "doormat";
 @import "header";
-@import "contact-button";
+@import "call-to-action";
 @import "project";
