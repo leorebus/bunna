@@ -1,4 +1,5 @@
 .project__description {
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  margin: 0 auto;
+  max-width: 39rem;
+  padding: $spacing-base;
 }

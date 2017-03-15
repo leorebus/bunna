@@ -38,8 +38,9 @@ $media-mobile: "screen and (max-width: 1000px)";
 @import "layout";
 @import "visibility";
 
+@import "article";
+@import "call-to-action";
 @import "column";
 @import "doormat";
 @import "header";
-@import "call-to-action";
 @import "project";

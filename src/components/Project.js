@@ -1,6 +1,7 @@
 var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
+import Text from './Text';
 
 var Project = React.createClass({
   getInitialState: function () {
@@ -27,9 +28,9 @@ var Project = React.createClass({
     return (
       <div className="l-vl">
         <div className="doormat l-vl__flexel"></div>
-        <pre className="project__description l-row l-vl__fixel">
-        {this.state.description.text}
-        </pre>
+        <div className="project__description l-vl__fixel">
+          <Text text={this.state.description.text} />
+        </div>
       </div>
     )
   }

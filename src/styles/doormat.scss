@@ -1,6 +1,9 @@
+$doormat-min-height: 20rem;
+
 .doormat {
   background-size: cover;
   background-position: center;
   @include gradientVertical4(#a09a7f, #808a51, #8d8964, #95896d);
   background-image: url("#{$assetPath}/header.jpg");
+  min-height: $doormat-min-height;
 }
