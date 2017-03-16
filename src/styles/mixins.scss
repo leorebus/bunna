@@ -1,9 +1,0 @@
-@mixin gradientVertical4($c1, $c2, $c3, $c4) {
-  background-color: $c1;
-  background-image: linear-gradient(left, $c1 0%, $c2 50%, $c3 75%, $c4 100%);
-  background-image: -moz-linear-gradient(left, $c1 0%, $c2 50%, $c3 75%, $c4 100%);
-  background-image: -webkit-linear-gradient(left, $c1 0%, $c2 50%, $c3 75%, $c4 100%);
-  background-image: -o-linear-gradient(left, $c1 0%, $c2 50%, $c3 75%, $c4 100%);
-  background-image: -ms-linear-gradient(left, $c1 0%, $c2 50%, $c3 75%, $c4 100%);
-  background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, $c1), color-stop(50%, $c2), color-stop(75%, $c3), color-stop(100%, $c4));
-}

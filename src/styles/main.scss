@@ -33,8 +33,6 @@ $page-padding: $spacing-base;
 $media-enhanced: "screen and (min-width: 1000px)";
 $media-mobile: "screen and (max-width: 1000px)";
 
-@import "mixins";
-
 @import "layout";
 @import "visibility";
 
