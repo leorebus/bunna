@@ -1,15 +1,10 @@
-$column-title-color: $red;
-$column-title-shadow: $white;
-
-
 .column {
 }
 
 .column__title {
-  color: $column-title-color;
+  color: $color-column-title;
   font-family: 'Londrina Solid', sans-serif;
   font-size: $font-size-double;
   padding-bottom: $spacing-half;
   text-transform: uppercase;
-  text-shadow: $column-title-shadow 0 0 3px;
 }

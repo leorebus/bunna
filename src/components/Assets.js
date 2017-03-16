@@ -3,7 +3,7 @@ var React = require('react');
 import {getClient} from '../services/contentfulClient';
 import {Link} from 'react-router';
 
-var ArticlesList = React.createClass({
+var Assets = React.createClass({
   getInitialState: function () {
     return {
       entries: []
@@ -12,9 +12,7 @@ var ArticlesList = React.createClass({
 
   componentWillMount: function () {
     getClient().getEntries({
-      content_type: 'blogPost',
-      select: 'fields.title,fields.date,sys.id',
-      order: '-fields.date'
+      content_type: 'assets'
     })
       .then(entries => {
         this.setState({
@@ -28,14 +26,18 @@ var ArticlesList = React.createClass({
 
   render: function () {
     return (
-      <ul>
-        {this.state.entries.map(function (entry) {
-          var date = new Date(entry.fields.date);
-          return <li>[{date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear()}] <Link to={"/news/" + entry.sys.id}>{entry.fields.title}</Link></li>;
-        })}
-      </ul>
+      <div className="column l-row__col">
+        <h2 className="column__title">Ultime notizie</h2>
+        <ul>
+          {this.state.entries.map(function (entry) {
+            let fields = entry.fields;
+            return <li>{fields.title}</li>;
+          })}
+        </ul>
+        <Link to="/news">Leggi tutti i report</Link>
+      </div>
     )
   }
 });
 
-module.exports = ArticlesList;
+module.exports = Assets;

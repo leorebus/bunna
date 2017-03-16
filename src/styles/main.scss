@@ -1,11 +1,6 @@
 @import "reset";
 
-@import url('https://fonts.googleapis.com/css?family=PT+Serif|Londrina+Solid');
-
-html {
-  font-family: 'PT Serif', serif;
-  font-size: 16px;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto|Londrina+Solid');
 
 $assetPath: "../../img";
 
@@ -14,9 +9,19 @@ $flag-red: #ee3035;
 $orange: #faae56;
 $yellow: #ece755;
 $green: #0a8a4d;
+$green-lighter: #0ca961;
 $brown: #4d2b15;
 $white: #fff;
 $black: #000;
+
+$color-link: $red;
+$color-link-active: $orange;
+$color-title: $red;
+$color-title-variant: $brown;
+$color-column-title: $red;
+$color-call-to-action: $green;
+$color-call-to-action-text: $white;
+$color-call-to-action-active: $green-lighter;
 
 $spacing-base: 1rem;
 $spacing-half: 0.5 * $spacing-base;
@@ -32,6 +37,20 @@ $page-padding: $spacing-base;
 
 $media-enhanced: "screen and (min-width: 1000px)";
 $media-mobile: "screen and (max-width: 1000px)";
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  overflow-y: scroll;
+}
+
+a, a:visited {
+  color: $color-link;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: $color-link-active;
+}
 
 @import "layout";
 @import "visibility";

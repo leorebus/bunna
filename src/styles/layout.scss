@@ -17,30 +17,3 @@ $l-spacing: $page-padding / 2;
     flex: 0 1 50%;
   }
 }
-
-/*
- Vertical Layout:
- flexel is the flexible element
- fixel is the fixed element
- */
-.l-vl {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.l-vl--page {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.l-vl__flexel {
-  flex: 1 1 100%;
-}
-
-.l-vl__fixel {
-  flex: 0 0 auto;
-}

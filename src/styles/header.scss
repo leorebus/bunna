@@ -34,7 +34,6 @@ $header-height-en: 12rem;
 }
 
 .header__title {
-  color: $column-title-color;
   flex: 1 1 auto;
   font-family: 'Londrina Solid', sans-serif;
   font-size: $font-size-double;
@@ -48,11 +47,12 @@ $header-height-en: 12rem;
 }
 
 .header__name {
+  color: $color-title;
   display: block;
 }
 
 .header__name--variant {
-  color: #4d2b15;
+  color: $color-title-variant;
 }
 
 .header__contact {

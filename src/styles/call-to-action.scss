@@ -1,7 +1,7 @@
 .call-to-action {
-  background: $green;
+  background: $color-call-to-action;
   border-radius: 4px;
-  color: $white;
+  color: $color-call-to-action-text;
   cursor: pointer;
   display: inline-block;
   font-size: $font-size-base;
@@ -12,6 +12,11 @@
   text-transform: uppercase;
   @media #{$media-enhanced} {
     font-size: $font-size-double;
+  }
+
+  &:hover {
+    background: $color-call-to-action-active;
+    color: $color-call-to-action-text;
   }
 }
 

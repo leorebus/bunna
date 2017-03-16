@@ -1,11 +1,13 @@
 var React = require('react');
 
+import ArticlesList from './ArticlesList';
+
 var News = React.createClass({
 
   render: function () {
     return (
-      <div>
-        Lorem Ipsum
+      <div className="project__description">
+        <ArticlesList />
       </div>
     )
   }

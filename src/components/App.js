@@ -6,9 +6,9 @@ var App = React.createClass({
 
   render: function () {
     return (
-      <div className="l-vl l-vl--page">
+      <div className="">
         <Header />
-        <section className="content l-vl__flexel">
+        <section>
           {this.props.children}
         </section>
       </div>

@@ -3,34 +3,29 @@ var React = require('react');
 import {getClient} from '../services/contentfulClient';
 import Text from './Text';
 
-var Project = React.createClass({
+var Article = React.createClass({
   getInitialState: function () {
     return {
-      description: {}
+      text: undefined
     };
   },
 
   componentWillMount: function () {
-    getClient().getEntries({
-      content_type: 'description'
-    })
-      .then(description => {
+    getClient().getEntry(this.props.params.articleId)
+      .then(entry => {
         this.setState({
-          description: description.items[0].fields
+          text: entry.fields.content
         });
       });
-  },
-
-  componentDidUpdate: function (prevProps, prevState) {
   },
 
   render: function () {
     return (
       <div className="project__description">
-        <Text text={this.state.description.text} />
+        <Text text={this.state.text} />
       </div>
     )
   }
 });
 
-module.exports = Project;
+module.exports = Article;

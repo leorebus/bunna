@@ -7,12 +7,14 @@ var Home = React.createClass({
 
   render: function () {
     return (
-      <div className="l-vl">
-        <div className="doormat l-vl__flexel"></div>
-        <div className="l-row l-vl__fixel">
-
+      <div className="">
+        <div className="doormat hidden-mb"></div>
+        <div className="l-row">
+        <div className="column l-row__col">
+          <h2 className="column__title">Ultime notizie</h2>
           <ArticlesList />
-
+          <Link to="/news">Leggi tutti i report</Link>
+        </div>
           <div className="column l-row__col">
             <h2 className="column__title">Chi siamo</h2>
             <div>

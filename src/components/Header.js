@@ -7,7 +7,7 @@ var Header = React.createClass({
 
   render: function () {
     return (
-      <header className="header l-vl__fixel">
+      <header className="header">
         <Link className="header__logo" to="/" />
         <Link className="header__title hidden-mb" to="/">
           <span className="header__name">No early marriage</span>
