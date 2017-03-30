@@ -1,21 +1,26 @@
 const path = require('path')
 const webpack = require('webpack')
+const commonsPlugin = new webpack.optimize.CommonsChunkPlugin(
+    'commons',
+    'common.js'
+);
 
 module.exports = {
   devtool: 'eval',
 
-  entry: [
-    'webpack-hot-middleware/client',
-    './src/index'
-  ],
+  entry: {
+    main: ['webpack-hot-middleware/client', './src/index'],
+    project: ['webpack-hot-middleware/client', './src/project']
+  },
 
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js',
+    filename: '[name]-bundle.js',
     publicPath: '/public/'
   },
 
   plugins: [
+    commonsPlugin,
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],

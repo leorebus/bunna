@@ -1,6 +1,8 @@
 var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
+import ImageGallery from 'react-image-gallery';
+
 import Text from './Text';
 
 var Project = React.createClass({
@@ -25,8 +27,47 @@ var Project = React.createClass({
   },
 
   render: function () {
+    const images = [
+     {
+       original: 'http://lorempixel.com/1000/600/nature/1/',
+       thumbnail: 'http://lorempixel.com/250/150/nature/1/',
+     },
+     {
+       original: 'http://lorempixel.com/1000/600/nature/2/',
+       thumbnail: 'http://lorempixel.com/250/150/nature/2/'
+     },
+     {
+       original: 'http://lorempixel.com/1000/600/nature/3/',
+       thumbnail: 'http://lorempixel.com/250/150/nature/3/'
+     },
+     {
+       original: 'http://lorempixel.com/1000/600/nature/4/',
+       thumbnail: 'http://lorempixel.com/250/150/nature/4/'
+     },
+     {
+       original: 'http://lorempixel.com/1000/600/nature/5/',
+       thumbnail: 'http://lorempixel.com/250/150/nature/5/'
+     },
+     {
+       original: 'http://lorempixel.com/1000/600/nature/6/',
+       thumbnail: 'http://lorempixel.com/250/150/nature/6/'
+     },
+     {
+       original: 'http://lorempixel.com/1000/600/nature/7/',
+       thumbnail: 'http://lorempixel.com/250/150/nature/7/'
+     },
+     {
+       original: 'http://lorempixel.com/1000/600/nature/8/',
+       thumbnail: 'http://lorempixel.com/250/150/nature/8/'
+     }
+   ];
+
     return (
       <div className="project__description">
+      <ImageGallery
+        items={images}
+        slideInterval={2000}
+        lazyLoad='true' />
         <Text text={this.state.description.text} />
       </div>
     )

@@ -19,7 +19,7 @@ var Home = React.createClass({
             <h2 className="column__title">Chi siamo</h2>
             <div>
               Il progetto ‘No early marriage – no al matrimonio precoce’ nasce con lo scopo di sostenere all’istruzione secondaria le ragazze di Maymekden ed evitare loro la barbarie del matrimonio precoce...&nbsp;
-              <Link to="/progetto">Continua a leggere</Link>
+              <Link to="/project.html">Continua a leggere</Link>
             </div>
           </div>
 
