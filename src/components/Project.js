@@ -1,7 +1,7 @@
 var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
-import ImageGallery from 'react-image-gallery';
+import GalleryLoader from './GalleryLoader';
 
 import Text from './Text';
 
@@ -13,6 +13,10 @@ var Project = React.createClass({
   },
 
   componentWillMount: function () {
+    GalleryLoader().then(({ gallery }) => {
+      this.setState({ ImageGallery: gallery, g: true });
+    });
+
     getClient().getEntries({
       content_type: 'description'
     })
@@ -64,10 +68,10 @@ var Project = React.createClass({
 
     return (
       <div className="project__description">
-      <ImageGallery
-        items={images}
-        slideInterval={2000}
-        lazyLoad='true' />
+        {!('g' in this.state) && <p>Caricamento immagini...</p>}
+        {'g' in this.state &&
+          <this.state.ImageGallery items={images} slideInterval={2000} lazyLoad={true} />
+        }
         <Text text={this.state.description.text} />
       </div>
     )

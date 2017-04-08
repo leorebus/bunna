@@ -2,10 +2,10 @@ var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
 
-var Article = React.createClass({
+var Text = React.createClass({
 
   propTypes: {
-    text: React.PropTypes.string.isRequired
+    text: React.PropTypes.string
   },
 
   renderText: function () {
@@ -25,4 +25,4 @@ var Article = React.createClass({
   }
 });
 
-module.exports = Article;
+module.exports = Text;
