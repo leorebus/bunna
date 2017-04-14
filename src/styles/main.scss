@@ -2,41 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto|Londrina+Solid');
 
-$assetPath: "../../img";
-
-$red: #be1b31;
-$flag-red: #ee3035;
-$orange: #faae56;
-$yellow: #ece755;
-$green: #0a8a4d;
-$green-lighter: #0ca961;
-$brown: #4d2b15;
-$white: #fff;
-$black: #000;
-
-$color-link: $red;
-$color-link-active: $orange;
-$color-title: $red;
-$color-title-variant: $brown;
-$color-column-title: $red;
-$color-call-to-action: $green;
-$color-call-to-action-text: $white;
-$color-call-to-action-active: $green-lighter;
-
-$spacing-base: 1rem;
-$spacing-half: 0.5 * $spacing-base;
-$spacing-double: 2 * $spacing-base;
-
-$font-size-base: 1rem;
-$font-size-half: 0.5 * $font-size-base;
-$font-size-double: 2 * $font-size-base;
-$font-size-triple: 3 * $font-size-base;
-
-$page-h-padding-en: 10%;
-$page-padding: $spacing-base;
-
-$media-enhanced: "screen and (min-width: 1000px)";
-$media-mobile: "screen and (max-width: 1000px)";
+@import "variables";
 
 html {
   font-family: 'Roboto', sans-serif;
