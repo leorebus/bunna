@@ -37,6 +37,8 @@ module.exports = {
       { test: /\.scss?$/,
         loader: 'style!css!sass',
         include: path.join(__dirname, 'src', 'styles') },
+      { test: /\.css$/,
+        loader: 'style!css'},
       { test: /\.png$/,
         loader: 'file' },
       { test: /\.jpg$/,

@@ -52,14 +52,12 @@ a:hover, a:active {
   color: $color-link-active;
 }
 
-@import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";
-
 @import "layout";
 @import "visibility";
 
 @import "article";
 @import "call-to-action";
-@import "column";
+@import "title";
 @import "doormat";
 @import "header";
 @import "project";

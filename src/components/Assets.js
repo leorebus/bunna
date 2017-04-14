@@ -27,7 +27,7 @@ var Assets = React.createClass({
   render: function () {
     return (
       <div className="column l-row__col">
-        <h2 className="column__title">Ultime notizie</h2>
+        <h2 className="title">Ultime notizie</h2>
         <ul>
           {this.state.entries.map(function (entry) {
             let fields = entry.fields;
