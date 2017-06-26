@@ -8,13 +8,20 @@ import Text from './Text';
 var Project = React.createClass({
   getInitialState: function () {
     return {
-      description: {}
+      description: {},
+      is_gallery_loaded: false,
+      is_assets_loaded: false
     };
+  },
+
+  isGalleryReady: function () {
+    return this.state.is_gallery_loaded && this.state.is_assets_loaded;
   },
 
   componentWillMount: function () {
     GalleryLoader().then(({ gallery }) => {
-      this.setState({ ImageGallery: gallery, g: true });
+      this.ImageGallery = gallery;
+      this.setState({ is_gallery_loaded: true });
     });
 
     getClient().getEntries({
@@ -25,52 +32,33 @@ var Project = React.createClass({
           description: description.items[0].fields
         });
       });
+
+      getClient().getAssets()
+        .then(assets => {
+          var a = assets.items.map(function(o) {
+            return {
+              original: o.fields.file.url + '?h=500',
+              thumbnail: o.fields.file.url + '?w=100&h=75&fit=fill'
+            };
+          });
+          debugger;
+          this.setState({
+            assets: a,
+            is_assets_loaded: true
+          });
+        });
   },
 
   componentDidUpdate: function (prevProps, prevState) {
   },
 
   render: function () {
-    const images = [
-     {
-       original: 'http://lorempixel.com/1000/600/nature/1/',
-       thumbnail: 'http://lorempixel.com/250/150/nature/1/',
-     },
-     {
-       original: 'http://lorempixel.com/1000/600/nature/2/',
-       thumbnail: 'http://lorempixel.com/250/150/nature/2/'
-     },
-     {
-       original: 'http://lorempixel.com/1000/600/nature/3/',
-       thumbnail: 'http://lorempixel.com/250/150/nature/3/'
-     },
-     {
-       original: 'http://lorempixel.com/1000/600/nature/4/',
-       thumbnail: 'http://lorempixel.com/250/150/nature/4/'
-     },
-     {
-       original: 'http://lorempixel.com/1000/600/nature/5/',
-       thumbnail: 'http://lorempixel.com/250/150/nature/5/'
-     },
-     {
-       original: 'http://lorempixel.com/1000/600/nature/6/',
-       thumbnail: 'http://lorempixel.com/250/150/nature/6/'
-     },
-     {
-       original: 'http://lorempixel.com/1000/600/nature/7/',
-       thumbnail: 'http://lorempixel.com/250/150/nature/7/'
-     },
-     {
-       original: 'http://lorempixel.com/1000/600/nature/8/',
-       thumbnail: 'http://lorempixel.com/250/150/nature/8/'
-     }
-   ];
-
     return (
       <div className="project__description">
-        {!('g' in this.state) && <p>Caricamento immagini...</p>}
-        {'g' in this.state &&
-          <this.state.ImageGallery items={images} slideInterval={2000} lazyLoad={true} />
+        {!this.isGalleryReady() &&
+          <p>Caricamento immagini...</p>}
+        {this.isGalleryReady() &&
+          <this.ImageGallery items={this.state.assets} slideInterval={2000} lazyLoad={true} />
         }
         <Text text={this.state.description.text} />
       </div>
