@@ -31,5 +31,7 @@ $font-size-triple: 3 * $font-size-base;
 $page-h-padding-en: 10%;
 $page-padding: $spacing-base;
 
-$media-enhanced: "screen and (min-width: 1000px)";
-$media-mobile: "screen and (max-width: 1000px)";
+$viewport-enhanced: 1000px;
+
+$media-enhanced: "screen and (min-width: #{$viewport-enhanced})";
+$media-mobile: "screen and (max-width: #{$viewport-enhanced - 1px})";

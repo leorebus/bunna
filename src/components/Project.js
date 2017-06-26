@@ -41,7 +41,6 @@ var Project = React.createClass({
               thumbnail: o.fields.file.url + '?w=100&h=75&fit=fill'
             };
           });
-          debugger;
           this.setState({
             assets: a,
             is_assets_loaded: true
