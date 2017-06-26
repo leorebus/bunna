@@ -13,20 +13,22 @@ var Article = React.createClass({
 
   componentWillMount: function () {
     getClient().getEntry(this.props.params.articleId)
-      .then(entry => {
-        this.setState({
-          text: entry.fields.content,
-          title: entry.fields.title,
-          date: entry.fields.date
-        });
+    .then(entry => {
+      this.setState({
+        text: entry.fields.content,
+        title: entry.fields.title,
+        date: entry.fields.date
       });
+    });
   },
 
   render: function () {
     return (
       <div>
-        <h2 className="title">{this.state.title}</h2>
-        <div>Pubblicato il: <FormattedDate date={this.state.date} /></div>
+        <div className="article__header">
+          <h2 className="title">{this.state.title}</h2>
+          <div>Pubblicato il: <FormattedDate date={this.state.date} /></div>
+        </div>
         <div className="project__description">
           <Text text={this.state.text} />
         </div>
