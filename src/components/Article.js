@@ -3,12 +3,24 @@ var React = require('react');
 import {getClient} from '../services/contentfulClient';
 import Text from './Text';
 import FormattedDate from './FormattedDate';
+import Gallery from './Gallery';
+
 
 var Article = React.createClass({
   getInitialState: function () {
     return {
-      text: undefined
+      text: undefined,
+      date: undefined,
+      title: undefined,
+      pictures: undefined
     };
+  },
+
+  formatPictures: function (pictures) {
+    if (!pictures) return false;
+    return pictures.map(function (p) {
+      return p.sys.id;
+    });
   },
 
   componentWillMount: function () {
@@ -17,7 +29,8 @@ var Article = React.createClass({
       this.setState({
         text: entry.fields.content,
         title: entry.fields.title,
-        date: entry.fields.date
+        date: entry.fields.date,
+        pictures: this.formatPictures(entry.fields.pictures)
       });
     });
   },
@@ -25,13 +38,16 @@ var Article = React.createClass({
   render: function () {
     return (
       <div>
-        <div className="article__header">
+        <div className="text__header">
           <h2 className="title">{this.state.title}</h2>
-          <div>Pubblicato il: <FormattedDate date={this.state.date} /></div>
+          {this.state.date &&
+            <div>Pubblicato il: <FormattedDate date={this.state.date} /></div>
+          }
         </div>
-        <div className="project__description">
-          <Text text={this.state.text} />
-        </div>
+        {this.state.pictures &&
+          <Gallery filter={this.state.pictures} />
+        }
+        <Text text={this.state.text} />
       </div>
     )
   }

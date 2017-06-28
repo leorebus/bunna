@@ -1,0 +1,29 @@
+.gallery {
+  margin: $spacing-base auto;
+  max-width: 100%;
+  width: $gallery-width;
+}
+
+/* overriding image-gallery style */
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  height: 100%;
+}
+
+.image-gallery-description {
+  background: none !important;
+  bottom: 0 !important;
+  color: inherit !important;
+  display: block !important;
+  position: relative !important;
+}
+
+.image-gallery-image {
+  text-align: center;
+}
+
+.image-gallery-slide img  {
+  max-width: 100%;
+  width: auto !important;
+}

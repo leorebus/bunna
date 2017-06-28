@@ -14,7 +14,8 @@ var Project = React.createClass({
 
   componentWillMount: function () {
     getClient().getEntries({
-      content_type: 'description'
+      content_type: 'description',
+      order: '-sys.updatedAt'
     })
       .then(description => {
         this.setState({
@@ -25,7 +26,7 @@ var Project = React.createClass({
 
   render: function () {
     return (
-      <div className="project__description">
+      <div>
         <Gallery />
         <Text text={this.state.description.text} />
       </div>
