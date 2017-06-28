@@ -1,12 +1,15 @@
-.article {
+.text {
   line-height: 1.5rem;
+  margin: 0 auto;
+  max-width: $text-width;
+  padding: $spacing-base;
   text-align: justify;
 }
 
-.article__header {
+.text__header {
   text-align: center;
 }
 
-.article__p {
+.text__p {
   padding-bottom: $spacing-half;
 }

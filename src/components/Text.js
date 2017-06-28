@@ -10,13 +10,13 @@ var Text = React.createClass({
     if (!this.props.text) return <p>Caricamento...</p>;
     var paragraphs = this.props.text.split('\n').filter(String);
     return paragraphs.map(function(p, key){
-      return <p className="article__p">{p}</p>;
+      return <p key={key} className="text__p">{p}</p>;
     });
   },
 
   render: function () {
     return (
-      <article className="article">
+      <article className="text">
         {this.renderText()}
       </article>
     )

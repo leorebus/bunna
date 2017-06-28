@@ -11,6 +11,16 @@ var ArticlesList = React.createClass({
     };
   },
 
+  formatEntries: function (entries) {
+    if (!this.props.limit || this.props.limit >= entries.items.length) {
+      return entries.items;
+    }
+    this.setState({
+      showMore: true
+    });
+    return entries.items.slice(0, this.props.limit);
+  },
+
   componentWillMount: function () {
     getClient().getEntries({
       content_type: 'blogPost',
@@ -19,22 +29,24 @@ var ArticlesList = React.createClass({
     })
       .then(entries => {
         this.setState({
-          entries: entries.items
+          entries: this.formatEntries(entries)
         });
       });
-  },
-
-  componentDidUpdate: function (prevProps, prevState) {
   },
 
   render: function () {
     if (this.state.entries.length === 0) return (<div>Caricamento..</div>);
     return (
-      <ul>
-        {this.state.entries.map(function (entry) {
-          return <li>[<FormattedDate date={entry.fields.date} />] <Link to={"/news/" + entry.sys.id}>{entry.fields.title}</Link></li>;
-        })}
-      </ul>
+      <div>
+        <ul>
+          {this.state.entries.map(function (entry, key) {
+            return <li key={key}>[<FormattedDate date={entry.fields.date} />] <Link to={"/news/" + entry.sys.id}>{entry.fields.title}</Link></li>;
+          })}
+        </ul>
+        {this.state.showMore &&
+          <Link to='/news'>Archivio notizie</Link>
+        }
+      </div>
     )
   }
 });

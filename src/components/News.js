@@ -6,7 +6,8 @@ var News = React.createClass({
 
   render: function () {
     return (
-      <div className="project__description">
+      <div className="text">
+        <h2 className="title">Archivio notizie</h2>
         <ArticlesList />
       </div>
     )

@@ -5,15 +5,16 @@ import ArticlesList from './ArticlesList';
 
 var Home = React.createClass({
 
+  ARTICLE_LIST_LIMIT: 3,
+
   render: function () {
     return (
       <div className="">
-        <div className="doormat hidden-mb"></div>
+        <div className="doormat"></div>
         <div className="l-row">
         <div className="column l-row__col">
           <Link to="/news" className="title">Ultime notizie</Link>
-          <ArticlesList />
-          <Link to="/news">Leggi tutti i report</Link>
+          <ArticlesList limit={this.ARTICLE_LIST_LIMIT} />
         </div>
           <div className="column l-row__col">
             <Link to="/progetto" className="title">Chi siamo</Link>

@@ -20,9 +20,10 @@ a:hover, a:active {
 @import "layout";
 @import "visibility";
 
-@import "article";
+@import "text";
 @import "call-to-action";
 @import "title";
 @import "doormat";
 @import "header";
-@import "project";
+
+@import "gallery";
