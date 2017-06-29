@@ -3,6 +3,7 @@ $assetPath: "../../img";
 $red: #be1b31;
 $flag-red: #ee3035;
 $orange: #faae56;
+$orange-lighter: lighten($orange,15%);
 $yellow: #ece755;
 $green: #0a8a4d;
 $green-lighter: #0ca961;
@@ -40,8 +41,6 @@ $gallery-width: 45rem;
 /* HEADER */
 $header-height: 14rem;
 $header-height-en: 14rem;
-$logo-size: $header-height - 2 * $spacing-base;
-$logo-size-en: $header-height-en - 2 * $spacing-base;
 
 /* MEDIA QUERIES */
 $viewport-enhanced: 1000px;

@@ -1,25 +1,16 @@
-$l-spacing: $page-padding / 2;
+html, body, main, .l-main {
+  height: 100%;
+}
 
-.l-row {
-  padding: $l-spacing;
+.l-main {
   display: flex;
   flex-direction: column;
-
-  @media #{$media-enhanced} {
-    flex-direction: row;
-    padding: $l-spacing $page-h-padding-en;
-  }
 }
 
-.l-row__col {
-  padding: $l-spacing;
-  @media #{$media-enhanced} {
-    flex: 0 1 50%;
-  }
+.l-main__head  {
+  flex: 0 0 auto;
 }
 
-@media #{$media-enhanced} {
-  .l-main {
-    height: calc(100vh - #{$header-height-en});
-  }
+.l-main__body {
+  flex: 1;
 }

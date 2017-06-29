@@ -11,19 +11,20 @@ var Home = React.createClass({
     return (
       <div className="home">
         <div className="home__doormat"></div>
-        <div className="l-row">
-        <div className="column l-row__col">
-          <Link to="/news" className="title">Ultime notizie</Link>
-          <ArticlesList limit={this.ARTICLE_LIST_LIMIT} />
-        </div>
-          <div className="column l-row__col">
+        <div className="home__row">
+          <div className="home__col">
+            <Link to="/news" className="title">Ultime notizie</Link>
+            <ArticlesList limit={this.ARTICLE_LIST_LIMIT} />
+          </div>
+          <div className="home__col">
             <Link to="/progetto" className="title">Chi siamo</Link>
             <div>
-              Il progetto ‘No early marriage – no al matrimonio precoce’ nasce con lo scopo di sostenere all’istruzione secondaria le ragazze di Maymekden ed evitare loro la barbarie del matrimonio precoce...&nbsp;
-              <Link to="/progetto">Continua a leggere</Link>
+              <p>
+                Il progetto ‘No early marriage – no al matrimonio precoce’ nasce nel gennaio 2011 per opera di un gruppo di amici, con lo scopo di sostenere all'istruzione secondaria le ragazze di Maymekden - un villaggio non lontano dalla città di Macallè, nel nord dell’Etiopia - ed evitare loro la barbarie del matrimonio precoce...
+              </p>
+            <Link to="/progetto">Continua a leggere</Link>
             </div>
           </div>
-
         </div>
       </div>
     )

@@ -26,7 +26,7 @@ var Assets = React.createClass({
 
   render: function () {
     return (
-      <div className="column l-row__col">
+      <div className="column home__col">
         <h2 className="title">Ultime notizie</h2>
         <ul>
           {this.state.entries.map(function (entry) {

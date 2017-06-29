@@ -1,0 +1,11 @@
+$footer-background: $orange-lighter;
+.footer {
+  background-color: $footer-background;
+  font-size: 0.8em;
+  padding: $spacing-base;
+  text-align: center;
+}
+
+.footer__el {
+  white-space: nowrap;
+}

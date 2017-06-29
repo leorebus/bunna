@@ -7,7 +7,7 @@ var Header = React.createClass({
 
   render: function () {
     return (
-      <header className="header">
+      <div className="header">
         <Link className="header__logo" to="/" />
         <Link className="header__title hidden-mb" to="/">
           <span className="header__name">No early marriage</span>
@@ -16,7 +16,7 @@ var Header = React.createClass({
         <div className="header__contact">
           <ContactButton />
         </div>
-      </header>
+      </div>
     )
   }
 });
