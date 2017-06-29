@@ -1,6 +1,6 @@
 var React = require('react');
 
-var contactAddress = ['mariaadele.signorini', 'unifi.it'].join('@');
+var contactAddress = [['mariaadele', 'signorini'].join('.'), ['unifi', 'it'].join('.')].join('@');
 
 var Header = React.createClass({
 
@@ -12,7 +12,9 @@ var Header = React.createClass({
 
   render: function () {
     return (
-      <a onClick={this.handleClick} href="mailto:contact" className="call-to-action call-to-action--larger-mb">Contatta</a>
+      <a onClick={this.handleClick} href="mailto:contact" className={this.props.classes} alt='Contatta'>
+        {this.props.text || 'Contatta'}
+      </a>
     )
   }
 });

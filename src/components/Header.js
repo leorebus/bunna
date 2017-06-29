@@ -1,6 +1,5 @@
 var React = require('react');
 
-import ContactButton from './ContactButton';
 import {Link} from 'react-router';
 
 var Header = React.createClass({
@@ -14,7 +13,7 @@ var Header = React.createClass({
           <span className="header__name--variant">No al matrimonio precoce</span>
         </Link>
         <div className="header__contact">
-          <ContactButton />
+          <Link to="/contatti" className="call-to-action call-to-action--larger-mb">Sostieni</Link>
         </div>
       </div>
     )

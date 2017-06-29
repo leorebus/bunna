@@ -1,19 +1,16 @@
 .call-to-action {
   background: $color-call-to-action;
   border-radius: 4px;
-  color: $color-call-to-action-text;
+  color: $color-call-to-action-text !important;
   cursor: pointer;
   display: inline-block;
-  font-size: $font-size-base;
+  font-size: $font-size-double;
   font-family: 'Londrina Solid', sans-serif;
   padding: $spacing-base $spacing-double;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   transition: transform 0.2s;
-  @media #{$media-enhanced} {
-    font-size: $font-size-double;
-  }
 
   &:hover {
     background: $color-call-to-action-active;
@@ -26,5 +23,16 @@
   padding: $spacing-base 5rem;
   @media #{$media-enhanced} {
     padding: $spacing-base $spacing-double;
+  }
+}
+
+.call-to-action--big {
+  $call-to-action-margin: 20%;
+  $call-to-action-width-en: 30rem;
+  display: block;
+  margin: $spacing-base $call-to-action-margin;
+  @media #{$media-enhanced} {
+    max-width: $call-to-action-width-en;
+    margin: $spacing-base auto;
   }
 }
