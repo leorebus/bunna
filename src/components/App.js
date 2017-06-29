@@ -6,9 +6,9 @@ var App = React.createClass({
 
   render: function () {
     return (
-      <div className="">
+      <div>
         <Header />
-        <section>
+        <section className="l-main">
           {this.props.children}
         </section>
       </div>

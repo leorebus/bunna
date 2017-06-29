@@ -9,8 +9,8 @@ var Home = React.createClass({
 
   render: function () {
     return (
-      <div className="">
-        <div className="doormat"></div>
+      <div className="home">
+        <div className="home__doormat"></div>
         <div className="l-row">
         <div className="column l-row__col">
           <Link to="/news" className="title">Ultime notizie</Link>

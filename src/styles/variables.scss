@@ -31,10 +31,19 @@ $font-size-triple: 3 * $font-size-base;
 $page-h-padding-en: 10%;
 $page-padding: $spacing-base;
 
+/* TEXT */
 $text-width: 39rem;
+
+/* GALLERY */
 $gallery-width: 45rem;
 
-$viewport-enhanced: 1000px;
+/* HEADER */
+$header-height: 14rem;
+$header-height-en: 14rem;
+$logo-size: $header-height - 2 * $spacing-base;
+$logo-size-en: $header-height-en - 2 * $spacing-base;
 
+/* MEDIA QUERIES */
+$viewport-enhanced: 1000px;
 $media-enhanced: "screen and (min-width: #{$viewport-enhanced})";
 $media-mobile: "screen and (max-width: #{$viewport-enhanced - 1px})";

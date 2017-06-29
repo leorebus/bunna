@@ -10,6 +10,7 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  transition: transform 0.2s;
   @media #{$media-enhanced} {
     font-size: $font-size-double;
   }
@@ -17,6 +18,7 @@
   &:hover {
     background: $color-call-to-action-active;
     color: $color-call-to-action-text;
+    transform: scale(1.05);
   }
 }
 

@@ -17,13 +17,16 @@ a:hover, a:active {
   color: $color-link-active;
 }
 
+/* basics */
 @import "layout";
 @import "visibility";
 
-@import "text";
+/* components */
 @import "call-to-action";
-@import "title";
-@import "doormat";
 @import "header";
+@import "home";
+@import "text";
+@import "title";
 
+/* external */
 @import "gallery";

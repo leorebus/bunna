@@ -1,5 +1,3 @@
-$header-height: 12rem;
-$header-height-en: 12rem;
 
 .header {
   align-items: center;
@@ -16,19 +14,22 @@ $header-height-en: 12rem;
 }
 
 .header__logo {
+  $logo-size: 20rem;
+  $logo-size-en: $header-height-en - 2 * $spacing-base;
+
   background: url("#{$assetPath}/logo.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: $header-height;
+  background-size: contain;
   background-image: url("#{$assetPath}/logo_mb.svg"), none;
-  flex: 0 0 $header-height;
-  height: $header-height;
-  width: $header-height;
+  flex: 0 0 $logo-size;
+  height: $logo-size;
+  width: $logo-size;
+  max-width: 100%;
 
   @media #{$media-enhanced} {
-    background-size: $header-height-en;
-    flex: 0 0 $header-height-en;
-    height: $header-height-en;
+    flex: 0 0 $logo-size-en;
+    height: $logo-size-en;
   }
 }
 
