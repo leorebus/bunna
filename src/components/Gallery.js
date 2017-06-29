@@ -17,15 +17,7 @@ var Gallery = React.createClass({
   },
 
   mapAssets: function (assets) {
-    var assetsItems = assets.items;
-
-    if (this.props.filter) {
-      assetsItems = assetsItems.filter(function(item) {
-        return this.props.filter.indexOf(item.sys.id) > -1;
-      }.bind(this));
-    }
-
-    return assetsItems.map(function(o) {
+    return assets.items.map(function(o) {
       return {
         original:  o.fields.file.url + '?h=500',
         thumbnail: o.fields.file.url + '?w=100&h=75&fit=fill',
@@ -35,17 +27,24 @@ var Gallery = React.createClass({
   },
 
   componentWillMount: function () {
+    var queryOptions = {};
+    if (this.props.filter) {
+      queryOptions = {
+        'sys.id[in]' : this.props.filter.join(',')
+      };
+    }
+
     GalleryLoader().then(({ gallery }) => {
       this.ImageGallery = gallery;
       this.setState({ is_gallery_loaded: true });
     });
-    getClient().getAssets()
-      .then(assets => {
-        this.setState({
-          assets: this.mapAssets(assets),
-          is_assets_loaded: true
-        });
+    getClient().getAssets(queryOptions)
+    .then(assets => {
+      this.setState({
+        assets: this.mapAssets(assets),
+        is_assets_loaded: true
       });
+    });
   },
 
   render: function () {
@@ -53,19 +52,19 @@ var Gallery = React.createClass({
       <div className='gallery'>
         {!this.isGalleryReady() &&
           <p>Caricamento immagini...</p>}
-        {this.isGalleryReady() &&
-          <this.ImageGallery
-            items={this.state.assets}
-            slideInterval={2000}
-            lazyLoad={true}
-            showFullscreenButton={false}
-            showPlayButton={false}
-            showThumbnails={this.state.assets.length > 1}
-          />
-        }
-      </div>
-    )
-  }
-});
+            {this.isGalleryReady() &&
+              <this.ImageGallery
+                items={this.state.assets}
+                slideInterval={2000}
+                lazyLoad={true}
+                showFullscreenButton={false}
+                showPlayButton={false}
+                showThumbnails={this.state.assets.length > 1}
+                />
+            }
+          </div>
+        )
+      }
+    });
 
-module.exports = Gallery;
+    module.exports = Gallery;
