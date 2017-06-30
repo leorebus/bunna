@@ -1,4 +1,3 @@
-
 .header {
   align-items: center;
   display: flex;
@@ -42,7 +41,7 @@
   text-transform: uppercase;
 
   @media #{$media-enhanced} {
-    font-size: $font-size-triple;
+    font-size: $font-size-almost-triple;
   }
 }
 
@@ -53,6 +52,16 @@
 
 .header__name--variant {
   color: $color-title-variant;
+}
+
+.header__tigrinya-name {
+  background: url("#{$assetPath}/tigrinya.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("#{$assetPath}/tigrinya.svg"), none;
+  height: $font-size-double;
+  margin: $spacing-quarter 0;
 }
 
 .header__contact {

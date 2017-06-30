@@ -21,13 +21,14 @@ $color-call-to-action-text: $white;
 $color-call-to-action-active: $green-lighter;
 
 $spacing-base: 1rem;
+$spacing-quarter: 0.25 * $spacing-base;
 $spacing-half: 0.5 * $spacing-base;
 $spacing-double: 2 * $spacing-base;
 
 $font-size-base: 1rem;
 $font-size-half: 0.5 * $font-size-base;
 $font-size-double: 2 * $font-size-base;
-$font-size-triple: 3 * $font-size-base;
+$font-size-almost-triple: 2.5 * $font-size-base;
 
 $page-h-padding-en: 10%;
 $page-padding: $spacing-base;

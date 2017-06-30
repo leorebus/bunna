@@ -9,6 +9,9 @@
 .image-gallery-left-nav,
 .image-gallery-right-nav {
   height: 100%;
+  &:hover:before {
+    color: $color-link-active !important;
+  }
 }
 
 .image-gallery-description {
@@ -26,4 +29,8 @@
 .image-gallery-slide img  {
   max-width: 100%;
   width: auto !important;
+}
+
+.image-gallery-thumbnail.active {
+  border-color: $color-link-active !important;  
 }

@@ -16,7 +16,7 @@ var App = React.createClass({
           &nbsp;&bull; <span className="footer__el">CF 90028910488</span>
           &nbsp;&bull; <span className="footer__el">IBAN: IT16F0616038130100000000316</span>
         </p>
-        <p>Copyright (c) 2016 Associazione No early marriage - No al matrimonio precoce Onlus All Rights Reserved</p>
+        <p>Copyright &copy; 2016 Associazione No early marriage - No al matrimonio precoce Onlus All Rights Reserved</p>
       </div>
     )
   }
