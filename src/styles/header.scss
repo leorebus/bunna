@@ -20,7 +20,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("#{$assetPath}/logo_mb.svg"), none;
+  background-image: url("#{$assetPath}/logo.svg"), none;
   flex: 0 0 $logo-size;
   height: $logo-size;
   width: $logo-size;
@@ -36,7 +36,7 @@
   flex: 1 1 auto;
   font-family: 'Londrina Solid', sans-serif;
   font-size: $font-size-double;
-  padding: 0 $page-padding;
+  padding: 0 $spacing-double;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -61,7 +61,7 @@
   background-size: contain;
   background-image: url("#{$assetPath}/tigrinya.svg"), none;
   height: $font-size-double;
-  margin: $spacing-quarter 0;
+  margin: $spacing-half 0;
 }
 
 .header__contact {
