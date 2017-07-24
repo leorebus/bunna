@@ -28,7 +28,7 @@ var Home = React.createClass({
           </div>
 
           <div className="home__col">
-            <Link to="/progetto" className="title">Diario di viaggio</Link>
+            <Link to="/diario" className="title">Diari di viaggio</Link>
             <div>
             <ArticlesList type="diario" dateShort={true} />
             </div>

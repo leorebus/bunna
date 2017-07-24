@@ -11,6 +11,16 @@ var ArticlesList = React.createClass({
     };
   },
 
+  getType: function () {
+    return this.props.type || 'news';
+  },
+
+  getContent: function () {
+    var type = this.getType();
+    if (type === 'news') return 'blogPost';
+    return type;
+  },
+
   formatEntries: function (entries) {
     if (!this.props.limit || this.props.limit >= entries.items.length) {
       return entries.items;
@@ -23,7 +33,7 @@ var ArticlesList = React.createClass({
 
   componentWillMount: function () {
     getClient().getEntries({
-      content_type: this.props.type || 'blogPost',
+      content_type: this.getContent(),
       select: 'fields.title,fields.date,sys.id',
       order: '-fields.date'
     })
@@ -40,11 +50,11 @@ var ArticlesList = React.createClass({
       <div>
         <ul>
           {this.state.entries.map((entry, key) => {
-            return <li key={key}>[<FormattedDate date={entry.fields.date} short={this.props.dateShort || false} />] <Link to={"/"+ (this.props.type || 'news') + "/" + entry.sys.id}>{entry.fields.title}</Link></li>;
+            return <li key={key}>[<FormattedDate date={entry.fields.date} short={this.props.dateShort || false} />] <Link to={"/"+ this.getType() + "/" + entry.sys.id}>{entry.fields.title}</Link></li>;
           })}
         </ul>
         {this.state.showMore &&
-          <Link to='/news'>Archivio notizie</Link>
+          <Link to={'/' + this.getType()}>Archivio</Link>
         }
       </div>
     )

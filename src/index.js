@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <IndexRoute component={Home} />
               <Route path="news" component={News} />
                 <Route path="news/:articleId" component={Article} />
-              <Route path="diario" component={Project} />
+              <Route path="diario" component={News} />
                 <Route path="diario/:articleId" component={Diary} />
               <Route path="progetto" component={Project} />
               <Route path="contatti" component={Support} />
