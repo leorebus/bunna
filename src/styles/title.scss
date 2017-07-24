@@ -1,11 +1,20 @@
+$title-font-size: $font-size-double;
+$subtitle-font-size: 1.2 * $font-size-base;
+
 .title {
   color: $color-column-title;
   font-family: 'Londrina Solid', sans-serif;
-  font-size: $font-size-double;
+  font-size: $title-font-size;
   padding-bottom: $spacing-half;
   text-transform: uppercase;
 }
 
 .title--standalone  {
   padding: $spacing-base 0;
+}
+
+.title--subtitle {
+  color: $color-subtitle;
+  font-size: $subtitle-font-size;
+  padding: 0;
 }

@@ -14,7 +14,7 @@ var Header = React.createClass({
           <span className="header__name">No al matrimonio precoce</span>
         </Link>
         <div className="header__contact">
-          <Link to="/contatti" className="call-to-action call-to-action--larger-mb">Sostieni</Link>
+          <Link to="/contatti" className="call-to-action call-to-action--larger-mb">Info</Link>
         </div>
       </div>
     )
