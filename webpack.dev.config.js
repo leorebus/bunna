@@ -35,6 +35,8 @@ module.exports = {
         loader: 'style!css'},
       { test: /\.png$/,
         loader: 'file' },
+      { test: /\.json$/,
+        loader: 'file-loader'},
       { test: /\.jpg$/,
         loader: "file-loader" },
       { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,

@@ -23,7 +23,7 @@ var ArticlesList = React.createClass({
 
   componentWillMount: function () {
     getClient().getEntries({
-      content_type: 'blogPost',
+      content_type: this.props.type || 'blogPost',
       select: 'fields.title,fields.date,sys.id',
       order: '-fields.date'
     })
@@ -39,8 +39,8 @@ var ArticlesList = React.createClass({
     return (
       <div>
         <ul>
-          {this.state.entries.map(function (entry, key) {
-            return <li key={key}>[<FormattedDate date={entry.fields.date} />] <Link to={"/news/" + entry.sys.id}>{entry.fields.title}</Link></li>;
+          {this.state.entries.map((entry, key) => {
+            return <li key={key}>[<FormattedDate date={entry.fields.date} short={this.props.dateShort || false} />] <Link to={"/"+ (this.props.type || 'news') + "/" + entry.sys.id}>{entry.fields.title}</Link></li>;
           })}
         </ul>
         {this.state.showMore &&

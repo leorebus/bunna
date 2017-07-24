@@ -7,6 +7,7 @@ import Home from './components/Home';
 import News from './components/News';
 import Support from './components/Support';
 import Article from './components/Article';
+import Diary from './components/Diary';
 import Project from './components/Project';
 
 import './styles/main.scss';
@@ -23,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
               <IndexRoute component={Home} />
               <Route path="news" component={News} />
                 <Route path="news/:articleId" component={Article} />
+              <Route path="diario" component={Project} />
+                <Route path="diario/:articleId" component={Diary} />
               <Route path="progetto" component={Project} />
               <Route path="contatti" component={Support} />
             </Route>

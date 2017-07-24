@@ -8,7 +8,7 @@ var Support = React.createClass({
     return (
       <div>
         <div className="text">
-          <h2 className="title title--standalone">Contatti</h2>
+          <h2 className="title title--standalone">Contatta</h2>
           <p className="text__p">
             Dettagli, chiarimenti, documenti, foto ed ogni altro approfondimento sull’iniziativa e sull’associazione
             possono essere richiesti <ContactButton text="al nostro contatto email" />.
