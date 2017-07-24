@@ -1,17 +1,23 @@
 var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
-import MDReactComponent from 'react-markdown-js';
+import Loader from '../services/ExternalLoader';
 
 var Diary = React.createClass({
   getInitialState: function () {
     return {
       text: undefined,
-      title: undefined
+      title: undefined,
+      isMDLoaded: false
     };
   },
 
   componentWillMount: function () {
+    Loader().then((obj) => {
+      this.MDReactComponent = obj.md;
+      this.setState({ isMDLoaded: true });
+    });
+
     getClient().getEntry(this.props.params.articleId)
     .then(entry => {
       this.setState({
@@ -29,9 +35,11 @@ var Diary = React.createClass({
         </div>
         <div className="diary">
           <div className="text">
-            {this.state.text &&
-              <MDReactComponent text={this.state.text} />
-            }
+            {(this.state.text && this.state.isMDLoaded) ? (
+              <this.MDReactComponent text={this.state.text} />
+            ) : (
+              <span>Caricamento...</span>
+            )}
           </div>
         </div>
       </div>

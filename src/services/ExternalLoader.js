@@ -5,7 +5,8 @@ export default () => {
     require.ensure([], () => {
       require('../../node_modules/react-image-gallery/styles/css/image-gallery.css');
       resolve({
-          gallery: require('react-image-gallery').default
+          gallery: require('react-image-gallery').default,
+          md: require('react-markdown-js').default
       });
     });
   });

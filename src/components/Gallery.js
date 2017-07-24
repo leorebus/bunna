@@ -1,7 +1,7 @@
 var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
-import GalleryLoader from '../services/GalleryLoader';
+import Loader from '../services/ExternalLoader';
 
 var Gallery = React.createClass({
 
@@ -34,8 +34,8 @@ var Gallery = React.createClass({
       };
     }
 
-    GalleryLoader().then(({ gallery }) => {
-      this.ImageGallery = gallery;
+    Loader().then((obj) => {
+      this.ImageGallery = obj.gallery;
       this.setState({ is_gallery_loaded: true });
     });
     getClient().getAssets(queryOptions)
