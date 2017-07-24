@@ -13,7 +13,10 @@ var FormattedDate = React.createClass({
     var date = new Date(this.props.date);
     return (
       <span>
-        {date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear()}
+        {!this.props.short &&
+          date.getDate() + '/'
+        }
+        {date.getMonth() + '/' + date.getFullYear()}
       </span>
     )
   }
