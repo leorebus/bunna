@@ -1,8 +1,5 @@
-First commit of this project
-
----
-
-Yay.
+Website for the non-profit organization "No early marriage" (noearlymarriage.org)
+The website consumes the Contentful API to provide a CMS. [More info about Contentful](www.contentful.com).
 
 
 Usage
