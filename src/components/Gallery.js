@@ -54,6 +54,7 @@ var Gallery = React.createClass({
           <p>Caricamento immagini...</p>}
             {this.isGalleryReady() &&
               <this.ImageGallery
+                disableSwipe={true}
                 items={this.state.assets}
                 slideInterval={2000}
                 lazyLoad={true}

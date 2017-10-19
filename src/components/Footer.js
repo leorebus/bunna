@@ -17,7 +17,8 @@ var App = React.createClass({
           &nbsp;&bull; <span className="footer__el">IBAN: IT16F0616038130100000000316</span>
         </p>
         <p>Copyright &copy; 2016 Associazione No early marriage - No al matrimonio precoce Onlus All Rights Reserved</p>
-        <p>Powered by <a href="https://www.contentful.com" target="_blank">Contentful</a></p>
+        <p>Creato da <a href="https://onga.ro">Leonardo Ongaro</a>
+          &nbsp;&bull; Powered by <a href="https://www.contentful.com" target="_blank">Contentful</a></p>
       </div>
     )
   }

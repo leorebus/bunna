@@ -1,13 +1,13 @@
 var React = require('react');
 
-var contactAddress = [['mariaadele', 'signorini'].join('.'), ['unifi', 'it'].join('.')].join('@');
+var contactAddress = ['info', ['noearlymarriage', 'org'].join('.')].join('@');
 
 var Header = React.createClass({
 
   handleClick (event) {
     event.preventDefault();
     const { email, headers } = this.props;
-    window.location.href = 'mailto:' + contactAddress + '?subject=No+Early+Marriage';
+    window.location.href = 'mailto:' + contactAddress;
   },
 
   render: function () {

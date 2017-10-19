@@ -5,7 +5,7 @@ import ArticlesList from './ArticlesList';
 
 var Home = React.createClass({
 
-  ARTICLE_LIST_LIMIT: 3,
+  ARTICLE_LIST_LIMIT: 5,
 
   render: function () {
     return (
