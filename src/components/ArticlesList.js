@@ -50,11 +50,11 @@ var ArticlesList = React.createClass({
       <div>
         <ul>
           {this.state.entries.map((entry, key) => {
-            return <li key={key}>[<FormattedDate date={entry.fields.date} short={this.props.dateShort || false} />] <Link to={"/"+ this.getType() + "/" + entry.sys.id}>{entry.fields.title}</Link></li>;
+            return <li key={key}><FormattedDate date={entry.fields.date} short={this.props.dateShort || false} /> - <Link to={"/"+ this.getType() + "/" + entry.sys.id}>{entry.fields.title}</Link></li>;
           })}
         </ul>
         {this.state.showMore &&
-          <Link to={'/' + this.getType()}>Archivio</Link>
+          <Link to={'/' + this.getType()}>Archivio notizie</Link>
         }
       </div>
     )
