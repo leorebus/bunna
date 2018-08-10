@@ -6,6 +6,7 @@ import ArticlesList from './ArticlesList';
 var Home = React.createClass({
 
   ARTICLE_LIST_LIMIT: 5,
+  DIARIES_LIST_LIMIT: 3,
 
   render: function () {
     return (
@@ -30,7 +31,7 @@ var Home = React.createClass({
           <div className="home__col">
             <Link to="/diario" className="title">Diari di viaggio</Link>
             <div>
-            <ArticlesList type="diario" dateShort={true} />
+            <ArticlesList type="diario" dateShort={true} limit={this.DIARIES_LIST_LIMIT} />
             </div>
           </div>
 

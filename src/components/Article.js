@@ -38,7 +38,7 @@ var Article = React.createClass({
   render: function () {
     return (
       <div>
-        <div className="text__header">
+        <div className="text text--header">
           <h2 className="title">{this.state.title}</h2>
           {this.state.date &&
             <div>Pubblicato il: <FormattedDate date={this.state.date} /></div>

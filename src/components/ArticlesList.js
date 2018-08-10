@@ -54,7 +54,7 @@ var ArticlesList = React.createClass({
           })}
         </ul>
         {this.state.showMore &&
-          <Link to={'/' + this.getType()}>Archivio notizie</Link>
+          <Link to={'/' + this.getType()}>[Archivio]</Link>
         }
       </div>
     )
