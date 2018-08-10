@@ -19,6 +19,7 @@
   bottom: 0 !important;
   color: inherit !important;
   display: block !important;
+  font-style: italic;
   position: relative !important;
 }
 
@@ -32,5 +33,5 @@
 }
 
 .image-gallery-thumbnail.active {
-  border-color: $color-link-active !important;  
+  border-color: $color-link-active !important;
 }

@@ -32,7 +32,7 @@ var Project = React.createClass({
         <Gallery />
         <Text text={this.state.description.text} />
         {this.state.description.text &&
-          <Link to="/contatti" className="call-to-action call-to-action--big">Sostieni</Link>
+          <Link to="/contatti" className="call-to-action call-to-action--end-of-page">Sostieni</Link>
         }
       </div>
     )

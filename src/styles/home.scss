@@ -30,7 +30,7 @@ $loading-img: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4QCwRXhpZgA
 
   @media #{$media-enhanced} {
     flex-direction: row;
-    padding: (3 * $spacing-base) $page-h-padding-en;
+    padding: $spacing-double $page-h-padding-en;
   }
 }
 

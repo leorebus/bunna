@@ -26,13 +26,13 @@
   }
 }
 
-.call-to-action--big {
+.call-to-action--end-of-page {
   $call-to-action-margin: 20%;
   $call-to-action-width-en: 30rem;
   display: block;
   margin: $spacing-base $call-to-action-margin;
   @media #{$media-enhanced} {
     max-width: $call-to-action-width-en;
-    margin: $spacing-base auto;
+    margin: 0 auto $spacing-double;
   }
 }
