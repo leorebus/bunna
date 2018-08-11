@@ -38,7 +38,8 @@ var Diary = React.createClass({
             {(this.state.text && this.state.isMDLoaded) ? (
               <this.MDReactComponent text={this.state.text} />
             ) : (
-              <span>Caricamento...</span>
+              <div class="loader">
+              </div>
             )}
           </div>
         </div>

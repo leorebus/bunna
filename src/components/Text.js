@@ -7,7 +7,7 @@ var Text = React.createClass({
   },
 
   renderText: function () {
-    if (!this.props.text) return <p>Caricamento...</p>;
+    if (!this.props.text) return <p className="loading-dots">Caricamento</p>;
     var paragraphs = this.props.text.split('\n').filter(String);
     return paragraphs.map(function(p, key){
       return <p key={key} className="text__p">{p}</p>;

@@ -8,7 +8,7 @@ var FormattedDate = React.createClass({
 
   render: function () {
     if (!this.props.date) {
-      return <p>Caricamento...</p>;
+      return <p className="loading-dots">Caricamento</p>;
     }
     var date = new Date(this.props.date);
     return (

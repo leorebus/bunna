@@ -45,7 +45,7 @@ var ArticlesList = React.createClass({
   },
 
   render: function () {
-    if (this.state.entries.length === 0) return (<div>Caricamento..</div>);
+    if (this.state.entries.length === 0) return (<div className="loading-dots">Caricamento</div>);
     return (
       <div>
         <ul>

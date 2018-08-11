@@ -51,18 +51,18 @@ var Gallery = React.createClass({
     return (
       <div className='gallery'>
         {!this.isGalleryReady() &&
-          <p>Caricamento immagini...</p>}
-            {this.isGalleryReady() &&
-              <this.ImageGallery
-                disableSwipe={true}
-                items={this.state.assets}
-                slideInterval={2000}
-                lazyLoad={true}
-                showFullscreenButton={false}
-                showPlayButton={false}
-                showThumbnails={this.state.assets.length > 1}
-                />
-            }
+          <div className='loading-spinner'></div>}
+        {this.isGalleryReady() &&
+          <this.ImageGallery
+            disableSwipe={true}
+            items={this.state.assets}
+            slideInterval={2000}
+            lazyLoad={true}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            showThumbnails={this.state.assets.length > 1}
+            />
+        }
           </div>
         )
       }
