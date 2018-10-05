@@ -9,6 +9,7 @@ import Support from './components/Support';
 import Article from './components/Article';
 import Diary from './components/Diary';
 import Project from './components/Project';
+import Video from './components/Video';
 
 import './styles/main.scss';
 
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <Route path="diario/:articleId" component={Diary} />
               <Route path="progetto" component={Project} />
               <Route path="contatti" component={Support} />
+              <Route path="video" component={Video} />
             </Route>
           </Router>,
           document.getElementById('app')

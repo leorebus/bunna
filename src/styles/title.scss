@@ -1,11 +1,12 @@
 $title-font-size: $font-size-double;
 $subtitle-font-size: 1.2 * $font-size-base;
+$calltoaction-font-size: 1.5 * $font-size-base;
 
 %title {
   color: $color-column-title;
   font-family: 'Londrina Solid', sans-serif;
   font-size: $title-font-size;
-  padding-bottom: $spacing-half;
+  padding: 0 0 $spacing-half;
   text-transform: uppercase;
 }
 
@@ -21,4 +22,10 @@ $subtitle-font-size: 1.2 * $font-size-base;
   color: $color-subtitle;
   font-size: $subtitle-font-size;
   padding: 0;
+}
+
+.title--calltoaction {
+  display: block;
+  font-size: $calltoaction-font-size;
+  padding: $spacing-half 0 0;
 }

@@ -4,8 +4,9 @@ $diary-heading-size: 1.5;
 
 .diary {
   img {
+    display: block;
     max-width: 100%;
-    margin: $spacing-base 0;
+    margin: $spacing-base auto;
   }
 
   h1 {

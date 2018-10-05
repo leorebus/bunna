@@ -1,13 +1,22 @@
 .text {
-  line-height: 1.5rem;
+  line-height: $text-line-height;
   margin: 0 auto;
   max-width: $text-width;
   padding: $spacing-base;
   text-align: justify;
 }
 
+.text__fullscreen {
+  margin: 0;
+  max-width: 100%;
+  @media #{$media-enhanced} {
+    padding: $page-padding $page-h-padding-en;
+  }
+}
+
 .text--header {
   text-align: center;
+  line-height: 1;
 }
 
 .text__p {
