@@ -9,7 +9,7 @@ var App = React.createClass({
     return (
       <div className="l-main">
         <header className="l-main__head">
-          <Header />
+          <Header lang={this.props.location.pathname === '/contatti' ? 'it' : 'en'} />
         </header>
 
         <section className="l-main__body">
