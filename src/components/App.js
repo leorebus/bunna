@@ -6,10 +6,12 @@ import Footer from './Footer';
 var App = React.createClass({
 
   render: function () {
+    var flag = this.props.params.lang == 'en' ? 'it' : 'en';
+    /* if lang is en show italian flag, else show english */
     return (
       <div className="l-main">
         <header className="l-main__head">
-          <Header lang={this.props.location.pathname === '/contatti' ? 'it' : 'en'} />
+          <Header flag={flag} />
         </header>
 
         <section className="l-main__body">

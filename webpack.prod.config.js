@@ -37,8 +37,6 @@ module.exports = {
         loader: 'style!css'},
       { test: /\.(png|jpg|json)$/,
         loader: 'file?name=[name].[ext]?[hash:5]'},
-      { test: /\.svg$/,
-        loader: 'file?name=[name].[ext]'},
       { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
         loader: 'file'}
     ]

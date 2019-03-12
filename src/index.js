@@ -17,23 +17,24 @@ import {initClient} from './services/contentfulClient';
 
 document.addEventListener('DOMContentLoaded', function() {
   initClient()
-    .then(
-      () => {
-        ReactDOM.render(
-          <Router history={hashHistory}>
-            <Route path="/" component={App}>
-              <IndexRoute component={Home} />
-              <Route path="news" component={News} />
-                <Route path="news/:articleId" component={Article} />
-              <Route path="diario" component={News} />
-                <Route path="diario/:articleId" component={Diary} />
-              <Route path="progetto" component={Project} />
-              <Route path="contatti" component={Support} />
-              <Route path="video" component={Video} />
-            </Route>
-          </Router>,
-          document.getElementById('app')
-        );
-      }
-    );
+  .then(
+    () => {
+      ReactDOM.render(
+        <Router history={hashHistory}>
+          <Route path="/" component={App}>
+            <IndexRoute component={Home} />
+            <Route path="news" component={News} />
+            <Route path="news/:articleId" component={Article} />
+            <Route path="diario" component={News} />
+            <Route path="diario/:articleId" component={Diary} />
+            <Route path="progetto" component={Project} />
+            <Route path="progetto/:lang" component={Project} />
+            <Route path="contatti" component={Support} />
+            <Route path="video" component={Video} />
+          </Route>
+        </Router>,
+        document.getElementById('app')
+      );
+    }
+  );
 });

@@ -21,6 +21,11 @@
   display: block !important;
   font-style: italic;
   position: relative !important;
+
+  .en & {
+    // no english description at the moment, so just hide everything
+    display: none !important;
+  }
 }
 
 .image-gallery-image {

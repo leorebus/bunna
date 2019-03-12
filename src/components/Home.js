@@ -24,7 +24,7 @@ var Home = React.createClass({
               <p>
                 Il progetto ‘No early marriage – no al matrimonio precoce’ nasce nel gennaio 2011 per opera di un gruppo di amici, con lo scopo di sostenere all'istruzione secondaria le ragazze di Maymekden - un villaggio non lontano dalla città di Macallè, nel nord dell’Etiopia - ed evitare loro la barbarie del matrimonio precoce...
               </p>
-            <Link to="/progetto">Continua a leggere</Link>
+            <Link to="/progetto">Continua a leggere</Link> | <Link to="/progetto/en">Read the English version</Link>
             <Link className="title title--calltoaction" to="/video">Guarda il video girato a Maymekden</Link>
             </div>
           </div>

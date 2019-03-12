@@ -2,17 +2,27 @@ var React = require('react');
 
 import {Link} from 'react-router';
 
+const flagClassRoot = "header__flag"
+
 var Header = React.createClass({
+
+  getFlagClass: function () {
+    return flagClassRoot + "--" + this.state.flag;
+  },
+
+  getFlagLink: function () {
+    return "/progetto" + (this.props.flag === 'en' ? '/en' : '')
+  },
 
   getInitialState: function () {
     return {
-      flagUrl: "img/" + this.props.lang
+      flag: this.props.flag
     };
   },
 
   componentDidUpdate(prevProps) {
-    if (this.props.lang !== prevProps.lang) {
-      this.setState({flagUrl: "img/" + this.props.lang})
+    if (this.props.flag !== prevProps.flag) {
+      this.setState({flag: this.props.flag})
     }
   },
 
@@ -26,8 +36,10 @@ var Header = React.createClass({
           <span className="header__name">No al matrimonio precoce</span>
         </Link>
         <div className="header__contact">
-          {this.state.flagUrl}
-          <Link to="/contatti" className="call-to-action call-to-action--larger-mb">Info</Link>
+          {this.state.flag === 'en' && // show link to contatti only in the italian version (i.e. english flag is showing)
+            <Link to="/contatti" className="call-to-action">Contatta</Link>
+          }
+          <Link to={this.getFlagLink()} className={"header__flag " + this.getFlagClass()}></Link>
         </div>
       </div>
     )
