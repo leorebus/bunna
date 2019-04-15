@@ -1,6 +1,7 @@
 var React = require('react');
 
 import {Link} from 'react-router';
+import ContactButton from './ContactButton';
 
 const flagClassRoot = "header__flag"
 
@@ -36,9 +37,7 @@ var Header = React.createClass({
           <span className="header__name">No al matrimonio precoce</span>
         </Link>
         <div className="header__contact">
-          {this.state.flag === 'en' && // show link to contatti only in the italian version (i.e. english flag is showing)
-            <Link to="/contatti" className="call-to-action">Contatta</Link>
-          }
+          <ContactButton lang={this.state.flag == 'it' ? 'en' : 'it'} />
           <Link to={this.getFlagLink()} className={"header__flag " + this.getFlagClass()}></Link>
         </div>
       </div>

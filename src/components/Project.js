@@ -1,7 +1,6 @@
 var React = require('react');
 
 import {getClient} from '../services/contentfulClient';
-import {Link} from 'react-router';
 import ContactButton from './ContactButton';
 
 import Gallery from './Gallery';
@@ -43,12 +42,7 @@ var Project = React.createClass({
       <div className={this.props.params.lang}>
         <Gallery />
         <Text text={this.state.description.text} />
-        {this.state.description.text && this.props.params.lang !== 'en' &&
-          <Link to="/contatti" className="call-to-action call-to-action--end-of-page">Sostieni</Link>
-        }
-        {this.state.description.text && this.props.params.lang === 'en' &&
-          <ContactButton text="Contact us!" classes="call-to-action call-to-action--end-of-page" />
-        }
+        <ContactButton lang={this.props.params.lang} text="Sostieni" extraClass="call-to-action--end-of-page" />
       </div>
     )
   }

@@ -1,6 +1,6 @@
 var React = require('react');
 
-import ContactButton from './ContactButton';
+import EmailLink from './EmailLink';
 
 var App = React.createClass({
 
@@ -9,7 +9,7 @@ var App = React.createClass({
       <div className="footer">
         <p>
           Associazione <span className="footer__el">No early marriage - No al matrimonio precoce</span> Onlus
-          &bull; <ContactButton />
+          &bull; <EmailLink />
         </p>
         <p>
           <span className="footer__el">via Fiorentina, 1219 I 50036 Pratolino (Firenze)</span>

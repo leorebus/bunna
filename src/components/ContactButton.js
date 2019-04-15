@@ -1,22 +1,28 @@
+// contact button links to support page in italian, sends an email in english
+
 var React = require('react');
 
-var contactAddress = ['info', ['noearlymarriage', 'org'].join('.')].join('@');
+import {Link} from 'react-router';
+import EmailLink from './EmailLink';
 
-var Header = React.createClass({
+var ContactButton = React.createClass({
 
-  handleClick (event) {
-    event.preventDefault();
-    const { email, headers } = this.props;
-    window.location.href = 'mailto:' + contactAddress;
+  getClassName: function () {
+    return "call-to-action" + (this.props.extraClass ? " " + this.props.extraClass : "");
   },
 
   render: function () {
     return (
-      <a onClick={this.handleClick} href="mailto:contact" className={this.props.classes} alt='Contatta'>
-        {this.props.text || 'Contatta'}
-      </a>
+      <div>
+      {this.props.lang !== 'en' &&
+        <Link to="/contatti" className={this.getClassName()}>{this.props.text || 'Contatta'}</Link>
+      }
+      {this.props.lang === 'en' &&
+        <EmailLink text="Contact us" classes={this.getClassName()} />
+      }
+      </div>
     )
   }
 });
 
-module.exports = Header;
+module.exports = ContactButton;

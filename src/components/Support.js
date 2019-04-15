@@ -1,6 +1,6 @@
 var React = require('react');
 
-import ContactButton from './ContactButton';
+import EmailLink from './EmailLink';
 
 var Support = React.createClass({
 
@@ -11,7 +11,7 @@ var Support = React.createClass({
           <h2 className="title title--standalone">Contatta</h2>
           <p className="text__p">
             Dettagli, chiarimenti, documenti, foto ed ogni altro approfondimento sull’iniziativa e sull’associazione
-            possono essere richiesti <ContactButton text="al nostro contatto email" />.
+            possono essere richiesti <EmailLink text="al nostro contatto email" />.
           </p>
           <h2 className="title title--standalone">Sostieni</h2>
           <p className="text__p">
