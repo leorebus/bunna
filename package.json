@@ -12,11 +12,13 @@
   "author": "Leo",
   "license": "ISC",
   "dependencies": {
+    "babel-core": "^6.26.3",
     "contentful": "^3.8.1",
     "express": "^4.13.4",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "react-image-gallery": "^0.7.14",
+    "react-markdown-js": "^0.5.0",
     "react-router": "^3.0.2"
   },
   "devDependencies": {

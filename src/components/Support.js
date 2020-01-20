@@ -21,7 +21,7 @@ var Support = React.createClass({
           <h3 className="title title--subtitle">Bonifico</h3>
           <p className="text__p">I contributi possono essere versati sul conto corrente intestato all’associazione, le cui coordinate bancarie sono:</p>
           <p className="text__p text__p--emph">Intestatario: 'No early marriage-No al matrimonio precoce onlus'</p>
-          <p className="text__p text__p--emph">IBAN: IT63Z0306938132100000000316 (codice BIC: BCITITMM)</p>
+          <p className="text__p text__p--emph">IBAN: IT16F0616038130100000000316 (codice BIC: CRFIIT3F)</p>
           <p className="text__p">
             I contributi tramite bonifico bancario possono essere portati in deduzione, allegando alla dichiarazione dei redditi la copia del bonifico e la ricevuta dell'associazione.
           </p>
