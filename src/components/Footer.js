@@ -14,7 +14,7 @@ var App = React.createClass({
         <p>
           <span className="footer__el">via Fiorentina, 1219 I 50036 Pratolino (Firenze)</span>
           &nbsp;&bull; <span className="footer__el">CF 90028910488</span>
-        &nbsp;&bull; <span className="footer__el">IT63&nbsp;Z030&nbsp;6938&nbsp;1321&nbsp;0000&nbsp;0000&nbsp;316 (codice BIC: BCITITMM)</span>
+        &nbsp;&bull; <span className="footer__el">IT77&nbsp;L030&nbsp;6902&nbsp;9241&nbsp;0000&nbsp;0012&nbsp;680</span>
         </p>
         <p>Copyright &copy; 2016 Associazione No early marriage - No al matrimonio precoce Onlus All Rights Reserved</p>
         <p>Creato da <a href="https://onga.ro">Leonardo Ongaro</a>
